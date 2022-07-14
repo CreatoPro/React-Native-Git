@@ -1,0 +1,6 @@
+module Pods_tqms_tqmsTests {
+  umbrella header "Pods-tqms-tqmsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
