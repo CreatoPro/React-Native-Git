@@ -15,7 +15,7 @@ export default function App() {
 
   const RegisterUser = () =>{
   auth
-    .createUserWithEmailAndPassword( email,password)
+  .createUserWithEmailAndPassword( email,password)
     .then((userCredentials) => {
       const user = userCredentials.user;
       console.log('register', user.email);
