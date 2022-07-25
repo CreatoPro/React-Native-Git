@@ -12,7 +12,7 @@ const firebaseConfig = {
   projectId: "fir-v9-e5479",
   storageBucket: "fir-v9-e5479.appspot.com",
   messagingSenderId: "297037067714",
-  appId: "1:297037067714:web:1edbab8dd4d13b8279d25b"
+  appId: "1:297037067714:web:1edbab8dd4d13b8279d25b"  
 };
 
 let app

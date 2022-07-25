@@ -4,6 +4,8 @@ import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 //import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from 'react';
 //import { getAuth } from 'firebase/auth';
+import * as firebase from "firebase";
+
 import { auth } from './firebase/firebase-config';
 import 'firebase/auth';
 
