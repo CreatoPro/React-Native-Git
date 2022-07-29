@@ -7,6 +7,7 @@ import { COLORS, SIZES, FONTS, constants } from "../../constants";
 
 import { Shadow } from "react-native-shadow-2";
 
+
 const bottom_tabs = constants.bottom_tabs.map((bottom_tabs) => ({
   ...bottom_tabs,
   ref: React.createRef(),
