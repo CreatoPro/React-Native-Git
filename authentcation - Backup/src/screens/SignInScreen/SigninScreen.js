@@ -32,8 +32,7 @@ const SigninScreen = () => {
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
     <View style={styles.root}>
-      <Image source={Logo} style={[styles.logo, { height: height * 0.3 }]} resizeMode='contain' />
-      <CustomInput
+      <Image source={Logo} style={[styles.logo, { height: height * 0.6 }]} resizeMode='contain'
         placeholder="Username"
         value={username}
         setValue={setUsername} />
@@ -67,12 +66,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
     paddingTop: 40,
+    backgroundColor: '#FFFFFF',
   },
   logo: {
-    width: '70%',
-    maxWidth: 400,
+    width: '108%',
+    maxWidth: 700,
     maxHeight: 220,
-    borderRadius: 15
+    borderRadius: 15,
+    marginBottom:40,
   },
 })
 
