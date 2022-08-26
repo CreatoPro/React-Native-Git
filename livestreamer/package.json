@@ -1,0 +1,29 @@
+{
+  "name": "livestreamer",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "amazon-ivs-react-native-player": "^1.2.0",
+    "expo": "~46.0.9",
+    "expo-status-bar": "~1.4.0",
+    "prop-types": "^15.8.1",
+    "react": "18.0.0",
+    "react-hls-player": "^3.0.7",
+    "react-native": "0.69.4",
+    "react-native-broadcast": "^1.0.4",
+    "react-native-nodemediaclient": "^0.2.18",
+    "react-native-rtmp-publisher": "^0.3.0",
+    "react-native-video": "^5.2.0",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}
