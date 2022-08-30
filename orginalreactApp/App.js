@@ -16,6 +16,8 @@ import {
 } from "@videosdk.live/react-native-sdk";
 import { createMeeting, token } from "./api";
 
+import { registerRootComponent } from "expo";
+
 function JoinScreen(props) {
   const [meetingVal, setMeetingVal] = useState("");
   return (
@@ -113,3 +115,5 @@ export default function App() {
     <JoinScreen getMeetingId={getMeetingId} />
   );
 }
+
+registerRootComponent(App);
