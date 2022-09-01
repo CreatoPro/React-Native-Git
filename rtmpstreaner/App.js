@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dimensions, View } from "react-native";
-import { NodeCameraView } from "react-native-nodemediaclient";
+// import { NodeCameraView } from "react-native-nodemediaclient";
+import WebView from 'react-native-webview';
 
 const { width, height } = Dimensions.get("window");
 
@@ -23,23 +24,17 @@ const config = {
   }
 };
 
-const BroadcastScreen = () => {
-  const cameraViewRef = React.useRef(null);
-  const streamKey = 'InputLive';
-  const url = `rtmp://13.127.246.52:1935/AllenMumbai/${streamKey}`;
+// const BroadcastScreen = () => {
+//   const cameraViewRef = React.useRef(null);
+//   const streamKey = 'InputLive';
+//   const url = `rtmp://13.127.246.52:1935/AllenMumbai/${streamKey}`;
 
   return (
-    <View style={{flex: 1}}>
-      <NodeCameraView
-        style={{width, height}}
-        ref={cameraViewRef}
-        outputUrl={url}
-        camera={config.cameraConfig}
-        audio={config.audioConfig}
-        video={config.videoConfig}
-        autopreview={true}
-      />
-    </View>
+    <WebView source={{
+      uri:'https://2cjo2.sse.codesandbox.io/'
+    }}>
+
+    </WebView>
   );
 };
 

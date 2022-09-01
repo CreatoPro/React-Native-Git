@@ -14,7 +14,8 @@
     "react": "18.0.0",
     "react-native": "0.69.4",
     "react-native-nodemediaclient": "^0.2.18",
-    "react-native-rtmp-publisher": "^0.3.0"
+    "react-native-rtmp-publisher": "^0.3.0",
+    "react-native-webview": "^11.23.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
