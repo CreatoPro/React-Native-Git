@@ -1,6 +1,6 @@
-import { View, Text, Button, TextInput } from 'react-native'
+import { View, Text, Button, TextInput, TouchableOpacity, } from 'react-native'
 import PropTypes from "prop-types";
-import React, { useState, createRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Avatars from "./Avatars";
 import Form from 'react-native-form'
 import FieldSet from 'react-native-fieldset';
@@ -11,27 +11,34 @@ const SignIn = ({ requestToken }) => {
     const [moderator, setModerator] = useState(false);
     const [avatar, setAvatar] = useState({});
     const [loaded, setLoaded] = useState(false);
-    const inputRef = createRef();
+    const inputRef = useRef();
   
     useEffect(() => {
       setLoaded(true);
       inputRef.current.focus();
     }, [loaded]); // eslint-disable-line
+  const newLocal = <Avatars
+    currentAvatar={avatar?.name}
+    handleAvatarClick={(avatar) => {
+      setAvatar(avatar);
+    } } />;
   return (
     <View>
       <View >
-        <Text className="mg-b-2">Join the chat room</Text>
-        <Form ref="form" onTouchStart={(e) => {e.preventDefault()}}>
-        <FieldSet label="Fieldset label">
+        <Text>Join the chat room</Text>
+        
+        <Form  onTouchStart={(e) => {e.preventDefault()}}>
+        <FieldSet >
             <Text>
               Username
             </Text>
+            
             <TextInput
               name="name"
               id="name"
               ref={inputRef}
-              type="text"
-              className="radius"
+              // type="text"
+              // className="radius"
               placeholder="Type here..."
               autoComplete="off"
               value={username}
@@ -44,12 +51,7 @@ const SignIn = ({ requestToken }) => {
             <View >Select Avatar</View>
             <View >
               <View >
-                <Avatars
-                  currentAvatar={avatar?.name}
-                  handleAvatarClick={(avatar) => {
-                    setAvatar(avatar);
-                  }}
-                />
+                {newLocal}
               </View>
             </View>
             
@@ -58,28 +60,27 @@ const SignIn = ({ requestToken }) => {
                 type="checkbox"
                 id="moderator"
                 name="moderator"
-                className="mg-l-0 mg-r-1"
+                // className="mg-l-0 mg-r-1"
                 checked={moderator}
                 onChange={(e) => {
                   setModerator(e.target.checked);
                 }}
               />
-              <Text htmlFor="moderator">Join as moderator</Text>
+              <Text >Join as moderator</Text>
             </View>
             
-            <Button
+            <TouchableOpacity 
               onPress={(e) => {
                 requestToken(username, moderator, avatar);
               }}
               
             //   disabled={!username}
-            >
-              Start chatting
-            </Button>
+           >Button</TouchableOpacity>
+              
+          
           </FieldSet>
         </Form>
       </View>
-      <View ></View>
     </View>
   )
 }
